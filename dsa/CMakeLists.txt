@@ -6,22 +6,28 @@ PROJECT(
     LANGUAGES CXX
 )
 
-add_executable(
-    ${PROJECT_NAME}
+add_library(
+    ${PROJECT_NAME}Lib
+
+    STATIC
 
     src/main.cpp
 )
 
 target_include_directories(
-    ${PROJECT_NAME}
+    ${PROJECT_NAME}Lib
 
-    PRIVATE
-        ./include   
+    PUBLIC
+        ./include
 )
 
 target_compile_definitions(
-    ${PROJECT_NAME}
+    ${PROJECT_NAME}Lib
 
     PRIVATE
-        cxx_std_17   
+        cxx_std_17
 )
+
+if (NOT CROSSCOMPILE)
+    add_subdirectory(tests) 
+endif()
