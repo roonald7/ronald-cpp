@@ -6,6 +6,7 @@ add_executable(
     ${PROJECT_NAME}Test
 
     src/binary_search_test.cpp
+    src/linked_list_test.cpp
 )
 
 target_link_libraries(
