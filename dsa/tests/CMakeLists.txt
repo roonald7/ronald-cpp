@@ -5,8 +5,8 @@ find_package(Catch2 CONFIG REQUIRED)
 add_executable(
     ${PROJECT_NAME}Test
 
-    src/binary_search_test.cpp
-    src/linked_list_test.cpp
+    src/algorithms/binary_search_test.cpp
+    src/data_structures/linked_list_test.cpp
 )
 
 target_link_libraries(
