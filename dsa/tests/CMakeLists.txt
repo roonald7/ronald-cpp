@@ -6,6 +6,7 @@ add_executable(
     ${PROJECT_NAME}Test
 
     src/algorithms/binary_search_test.cpp
+    src/algorithms/insertion_sort_test.cpp
     src/data_structures/linked_list_test.cpp
 )
 
